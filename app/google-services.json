@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1081814575153",
+    "firebase_url": "https://mandalika-event.firebaseio.com",
+    "project_id": "mandalika-event",
+    "storage_bucket": "mandalika-event.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081814575153:android:dbca16c3c8620371",
+        "android_client_info": {
+          "package_name": "com.example.thebestone.mandalikaevent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081814575153-h45pu29a69bb92uodirt6r9ku3p1oko9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.thebestone.mandalikaevent",
+            "certificate_hash": "1595e20c0f457f9c0222233580c5e5082ec2ab45"
+          }
+        },
+        {
+          "client_id": "1081814575153-jd82cupne816bdbcee6hu9kcgq2r6iam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkcksgokIQwyNNdf5DqOSt8XJZ5TjJoPU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081814575153-gi6hdd6qspp5ale6nh7fv5nr98a96es3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081814575153:android:1e62da60b74432e9",
+        "android_client_info": {
+          "package_name": "com.example.thebestone.mandalikaevents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081814575153-gvmrffuh41b447lc916npi22fh66vpcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.thebestone.mandalikaevents",
+            "certificate_hash": "1595e20c0f457f9c0222233580c5e5082ec2ab45"
+          }
+        },
+        {
+          "client_id": "1081814575153-jd82cupne816bdbcee6hu9kcgq2r6iam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkcksgokIQwyNNdf5DqOSt8XJZ5TjJoPU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081814575153-gi6hdd6qspp5ale6nh7fv5nr98a96es3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
