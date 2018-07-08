@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.thebestone.mandalikaevents.R;
 import com.example.thebestone.mandalikaevents.adapters.PublicVar;
 import com.example.thebestone.mandalikaevents.models.UserEvent;
+import com.example.thebestone.mandalikaevents.preferences.MandalikaPref;
 import com.example.thebestone.mandalikaevents.services.MandalikaAlarmReciever;
 import com.example.thebestone.mandalikaevents.services.SimpleAlarmManager;
 import com.example.thebestone.mandalikaevents.sqlite.SqliteHelper;
@@ -34,6 +35,7 @@ public class AktifitasDetail extends AppCompatActivity {
 
     int tglJadi, bulanJadi, tahunJadi;
 
+    MandalikaPref myPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +69,8 @@ public class AktifitasDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (dbHelper.dataTidakDouble(kodeEvent)) {
-                    dbHelper.addEvent(kodeEvent, emailuser, photoUser, namaEvent, desEvent, photoEvent, jenisEvent, waktuEvent, tglEvent, lokEvent);
+                if (dbHelper.dataTidakDouble(kodeEvent, myPref.getEmail())) {
+                    dbHelper.addEvent(kodeEvent, myPref.getEmail(), photoUser, namaEvent, desEvent, photoEvent, jenisEvent, waktuEvent, tglEvent, lokEvent, myPref.getEmail());
                     sparatedTgl(tglEvent);
 
                     new SimpleAlarmManager(AktifitasDetail.this).setup(
@@ -129,6 +131,7 @@ public class AktifitasDetail extends AppCompatActivity {
     }
 
     private void init() {
+        myPref = new MandalikaPref(this);
         dbHelper = new SqliteHelper(this);
 
         tvDeskEvent = findViewById(R.id.tvDescEventDetail);

@@ -26,11 +26,11 @@ public class SqliteHelper {
     }
 
     public void addEvent(String kodeEvent, String emailUser, String photoUser, String namaEvent, String deskEvent, String photoEvent
-            , String jenisEvent, String waktuEvent, String tglEvent, String lokasiEvent) {
+            , String jenisEvent, String waktuEvent, String tglEvent, String lokasiEvent, String favoritedBy) {
         try {
             db = dbConfig.getWritableDatabase();
-            db.execSQL("INSERT INTO TBFAV (KODEEVENT, EMAILUSER, PHOTOUSER, NAMAEVENT, DESKEVENT, PHOTOEVENT, JENISEVENT, WAKTUEVENT, TGLEVENT, LOKASIEVENT)" +
-                    "VALUES ('"+ kodeEvent +"', '"+ emailUser +"', '"+ photoUser +"', '"+ namaEvent +"', '"+ deskEvent +"', '"+ photoEvent +"', '"+ jenisEvent +"', '"+ waktuEvent +"','"+ tglEvent +"', '"+ lokasiEvent +"')");
+            db.execSQL("INSERT INTO TBFAV (KODEEVENT, EMAILUSER, PHOTOUSER, NAMAEVENT, DESKEVENT, PHOTOEVENT, JENISEVENT, WAKTUEVENT, TGLEVENT, LOKASIEVENT, FAVORITEDBY)" +
+                    "VALUES ('"+ kodeEvent +"', '"+ emailUser +"', '"+ photoUser +"', '"+ namaEvent +"', '"+ deskEvent +"', '"+ photoEvent +"', '"+ jenisEvent +"', '"+ waktuEvent +"','"+ tglEvent +"', '"+ lokasiEvent +"', '"+ favoritedBy +"')");
         } catch (SQLiteException e) {
             Toast.makeText(activity, "Error : " + e, Toast.LENGTH_SHORT).show();
         }
@@ -60,9 +60,9 @@ public class SqliteHelper {
         return userEvents;
     }
 
-    public boolean dataTidakDouble(String kodeEvent) {
+    public boolean dataTidakDouble(String email, String kodeEvent) {
         db = dbConfig.getReadableDatabase();
-        cursor = db.rawQuery("select * from tbFav where kodeEvent = '"+ kodeEvent +"'", null);
+        cursor = db.rawQuery("select * from tbFav where kodeEvent = '"+ kodeEvent +"' and favoritedBy = '" + email + "'", null);
         if (cursor.getCount() == 0) {
             return true;
         } else

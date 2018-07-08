@@ -106,7 +106,7 @@ public class FragProfil extends Fragment {
                     UserEvent event = snapEvent.getValue(UserEvent.class);
                     tampEvents.add(event);
                 }
-                
+
                 for (int i = tampEvents.size() - 1; i>=0; i--) {
                     listEvents.add(tampEvents.get(i));
                 }

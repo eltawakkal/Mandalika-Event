@@ -2,28 +2,42 @@
 <instant-run
     abi="x86"
     api-level="26"
-    build-mode="COLD"
+    build-mode="FULL"
     density="420dpi"
     format="10"
-    ir-eligibility="CLASS_ADDED"
     plugin-version="3.1.3"
-    timestamp="1531036716839"
+    timestamp="1531042921072"
     token="-3078793374218371512"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="690" />
+        duration="562" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="109" />
+        duration="184" />
     <task
         name="verifier"
-        duration="23" />
+        duration="93" />
 
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
     <artifact
         location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
@@ -31,12 +45,27 @@
         location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
         location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1531036204510"
+        timestamp="1531042921072"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
@@ -45,16 +74,19 @@
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
@@ -63,35 +95,17 @@
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1531036716839"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

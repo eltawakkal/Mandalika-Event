@@ -1,4 +1,4 @@
-#Sun Jul 08 16:03:18 WIB 2018
-base.0=/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/transforms/dexMerger/debug/17
+#Sun Jul 08 16:44:21 WIB 2018
+base.0=/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/transforms/dexMerger/debug/34
 path.0=classes.dex
 renamed.0=classes.dex

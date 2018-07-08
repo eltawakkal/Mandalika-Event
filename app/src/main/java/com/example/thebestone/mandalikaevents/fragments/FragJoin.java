@@ -40,17 +40,16 @@ public class FragJoin extends Fragment {
 
         init(v);
 
-        mRecyclerFav.setLayoutManager(new LinearLayoutManager(getContext()));
-        mRecyclerFav.setAdapter(adapterFavQ);
-
         return v;
     }
 
     private void init(View v) {
+        mRecyclerFav = v.findViewById(R.id.rec_main);
 
         myPref = new MandalikaPref(getContext());
         contex = getActivity();
         dbHelper = new SqliteHelper(getActivity());
+
         userEvents = dbHelper.selectAllFav();
 
         List<UserEvent> userEventsReady = new ArrayList<>();
@@ -63,12 +62,13 @@ public class FragJoin extends Fragment {
 
         if (userEventsReady.size()!=0) {
             adapterFavQ = new RecAdapterJoin(userEvents, getActivity());
+            mRecyclerFav.setLayoutManager(new LinearLayoutManager(getContext()));
+            mRecyclerFav.setAdapter(adapterFavQ);
         } else {
             Toast.makeText(contex, "Anda Belum Bergabung Ke Event Apapun!", Toast.LENGTH_SHORT).show();
         }
 
 
-        mRecyclerFav = v.findViewById(R.id.rec_main);
     }
 
 }
