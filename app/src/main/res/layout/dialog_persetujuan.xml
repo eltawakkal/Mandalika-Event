@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/syarat_join"
+            android:fontFamily="@font/lobster_two"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:text="Tidak Mem-Posting Event Yang Mengandung Sara"
+                android:fontFamily="@font/lobster_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:text="Tanggung Jawab Sepenuhnya Oleh Pemilik Email"
+                android:fontFamily="@font/lobster_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:text="Jika Ada Event Yang Melanggar Maka Admin Akan Menghapus Tanpa Sepengetahuan Pengguna"
+                android:fontFamily="@font/lobster_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:text="Menyetujui Semua Aturan yang Ada"
+                android:fontFamily="@font/lobster_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btRegister"
+            android:layout_marginBottom="5dp"
+            android:text="Daftar"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/rounded_accent"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

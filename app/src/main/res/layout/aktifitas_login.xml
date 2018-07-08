@@ -1,23 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:gravity="center">
+    android:background="@color/colorPrimary">
 
-    <TextView
-        android:text="Mandalika Event"
-        android:textSize="30sp"
-        android:fontFamily="@font/lobster_two"
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
         android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/bt_google_sign_in"
-        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </com.google.android.gms.common.SignInButton>
+        <ImageView
+            android:src="@drawable/logo_app"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
 
-</LinearLayout>
+        <TextView
+            android:text="Mandalika Event"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            android:fontFamily="@font/lobster_two"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Find Event Around Yout By Single Clik"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <!--<View-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:layout_margin="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"/>-->
+
+    <Button
+        android:id="@+id/bt_google_sign_in"
+        android:background="@drawable/bg_rounded_google"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:textColor="@color/colorWhite"
+        android:text="Masuk Dengan Google"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+</RelativeLayout>

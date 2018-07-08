@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1081814575153-jd82cupne816bdbcee6hu9kcgq2r6iam.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://mandalika-event.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1081814575153</string>
+    <string name="google_api_key" translatable="false">AIzaSyCkcksgokIQwyNNdf5DqOSt8XJZ5TjJoPU</string>
+    <string name="google_app_id" translatable="false">1:1081814575153:android:1e62da60b74432e9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCkcksgokIQwyNNdf5DqOSt8XJZ5TjJoPU</string>
+    <string name="google_storage_bucket" translatable="false">mandalika-event.appspot.com</string>
+    <string name="project_id" translatable="false">mandalika-event</string>
+</resources>

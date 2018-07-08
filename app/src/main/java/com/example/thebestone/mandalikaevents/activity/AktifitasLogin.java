@@ -2,12 +2,15 @@ package com.example.thebestone.mandalikaevents.activity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.thebestone.mandalikaevents.R;
@@ -31,13 +34,15 @@ public class AktifitasLogin extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 1;
 
-    SignInButton btGoogleSignIn;
+    Button btGoogleSignIn;
 
     GoogleSignInClient mGoogleClient;
     GoogleSignInOptions mGoogleOption;
     GoogleSignInAccount mAccount;
 
     MandalikaPref userPref;
+
+    DatabaseReference refUser;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,6 +55,7 @@ public class AktifitasLogin extends AppCompatActivity {
 
     private void initOther() {
         userPref = new MandalikaPref(this);
+        refUser = FirebaseDatabase.getInstance().getReference("users");
     }
 
     private void initGoogleOBj() {
@@ -85,7 +91,7 @@ public class AktifitasLogin extends AppCompatActivity {
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            final GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             Toast.makeText(this, "email : " + account.getDisplayName(), Toast.LENGTH_SHORT).show();
 
@@ -95,7 +101,7 @@ public class AktifitasLogin extends AppCompatActivity {
             query.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                    cekPengguna(dataSnapshot);
+                    cekPengguna(dataSnapshot, account);
                 }
 
                 @Override
@@ -112,7 +118,7 @@ public class AktifitasLogin extends AppCompatActivity {
         }
     }
 
-    private void cekPengguna(DataSnapshot dataSnapshot) {
+    private void cekPengguna(DataSnapshot dataSnapshot, GoogleSignInAccount account) {
 
         User user = null;
 
@@ -124,26 +130,47 @@ public class AktifitasLogin extends AppCompatActivity {
             setUserPref(user);
             gotoAktifitasUtama();
         } else {
-            tampilkanPersetujuan();
+            tampilkanPersetujuan(account);
         }
     }
 
     private void setUserPref(User user) {
-        Toast.makeText(this, "Nama : " + user.getNamaUser(), Toast.LENGTH_SHORT).show();
         userPref.setUser(user);
-    }
-
-    private void tampilkanPersetujuan() {
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert
-                .setTitle("Title")
-                .setMessage("Message");
-        Dialog dialog = alert.create();
-
-        dialog.show();
     }
 
     private void gotoAktifitasUtama() {
         startActivity(new Intent(this, AktifitasUtama.class));
+    }
+
+    public void tampilkanPersetujuan(final GoogleSignInAccount account) {
+        View v = getLayoutInflater().inflate(R.layout.dialog_persetujuan, null);
+
+        Button btRegister = v.findViewById(R.id.btRegister);
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this).setView(v);
+        final Dialog dialog = alert.create();
+        dialog.show();
+
+        btRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                User user = new User(
+                        account.getDisplayName(),
+                        account.getEmail(),
+                        account.getPhotoUrl().toString(),
+                        "Member"
+                );
+
+                String id = refUser.push().getKey();
+                refUser.child(id).setValue(user);
+
+                setUserPref(user);
+
+                gotoAktifitasUtama();
+
+                dialog.dismiss();
+            }
+        });
     }
 }
