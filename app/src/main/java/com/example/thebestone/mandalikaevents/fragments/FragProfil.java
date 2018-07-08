@@ -69,6 +69,13 @@ public class FragProfil extends Fragment {
         return v;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        getEvents();
+    }
+
     private void initObj(View v) {
 
         myPref = new MandalikaPref(getContext());
@@ -79,17 +86,19 @@ public class FragProfil extends Fragment {
         fabTambahEvent = v.findViewById(R.id.fabTambahEvent);
         fabTambahEvent.setVisibility(View.VISIBLE);
 
-        listEvents = new ArrayList<>();
 
         getEvents();
     }
 
     public void getEvents(){
 
+
+
         Query query = refEvents.orderByChild("emailUser").equalTo(myPref.getEmail());
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                listEvents = new ArrayList<>();
                 List<UserEvent> tampEvents = new ArrayList<>();
 
 
@@ -97,12 +106,12 @@ public class FragProfil extends Fragment {
                     UserEvent event = snapEvent.getValue(UserEvent.class);
                     tampEvents.add(event);
                 }
-
-                Toast.makeText(getContext(), "total : " + tampEvents.size(), Toast.LENGTH_SHORT).show();
-
+                
                 for (int i = tampEvents.size() - 1; i>=0; i--) {
                     listEvents.add(tampEvents.get(i));
                 }
+
+
 
                 setRecItems();
             }

@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -25,15 +26,19 @@ import android.widget.Toast;
 
 import com.example.thebestone.mandalikaevents.R;
 import com.example.thebestone.mandalikaevents.adapters.ListViewKabAdapter;
+import com.example.thebestone.mandalikaevents.adapters.PublicVar;
 import com.example.thebestone.mandalikaevents.models.UserEvent;
 import com.example.thebestone.mandalikaevents.preferences.MandalikaPref;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -59,12 +64,18 @@ public class AktifitasTambahEvent extends AppCompatActivity implements View.OnCl
 
     MandalikaPref myPref;
 
+    ArrayAdapter<String> adapterJenisEvent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aktifitas_tambah_event);
 
         initObj();
+
+        if (getIntent().getBooleanExtra("edit", false)) {
+            isEditEvent();
+        }
 
         editTgl.setOnFocusChangeListener(this);
         editTgl.setOnClickListener(this);
@@ -109,6 +120,8 @@ public class AktifitasTambahEvent extends AppCompatActivity implements View.OnCl
         editLokasi = findViewById(R.id.editLokasiTambah);
         spinJenisEvent = findViewById(R.id.spinJenisEventTambah);
 
+        adapterJenisEvent = new ArrayAdapter<>(this, android.R.layout.simple_list_item_checked, arrayJenis);
+        spinJenisEvent.setAdapter(adapterJenisEvent);
     }
 
     @Override
@@ -132,7 +145,7 @@ public class AktifitasTambahEvent extends AppCompatActivity implements View.OnCl
                         String kodeEvent = refEvents.push().getKey();
                         addEvent(nama, desc, jenisEvent, lokasi, waktu, tgl);
                     } else {
-//                        updateEvent(PublicVar.userEventPublic.getKodeEvent(), nama, desc, jenisEvent, waktu, tgl, lokasi);
+                        updateEvent(PublicVar.userEventPublic.getKodeEvent(), nama, desc, jenisEvent, waktu, tgl, lokasi);
                     }
                 }
 
@@ -269,6 +282,45 @@ public class AktifitasTambahEvent extends AppCompatActivity implements View.OnCl
         }
     }
 
+    public void updateEvent(final String kodeEvent, final String nama, final String desc, final String jenisEvent, final String waktu, final String tgl, final String lokasi) {
+        showProgresDialog();
+        refEvents = FirebaseDatabase.getInstance().getReference("events").child(kodeEvent);
+
+        if (uriImagePicked == null) {
+            final UserEvent userEvent = new UserEvent(kodeEvent, myPref.getEmail(), myPref.getFotourl(), nama, desc, namaImage, jenisEvent, lokasi, waktu, tgl);
+            refEvents.setValue(userEvent).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    pd.dismiss();
+                    finish();
+                }
+            });
+        } else {
+            refStorage = FirebaseStorage.getInstance().getReference("eventLombok/" + namaImage);
+            String urlFotoEvent = "https://firebasestorage.googleapis.com/v0/b/mandalika-event.appspot.com/o/eventLombok%2F" + namaImage + "?alt=media&token=8f26a1fa-64d5-439c-b71e-1efc932096c7";
+            final UserEvent userEvent = new UserEvent(kodeEvent, myPref.getEmail(), myPref.getFotourl(), nama, desc, urlFotoEvent, jenisEvent, lokasi, waktu, tgl);
+            refStorage.putFile(uriImagePicked).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    refEvents.setValue(userEvent).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            pd.dismiss();
+                            finish();
+                        }
+                    });
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(AktifitasTambahEvent.this, "Terjadi Kesalahan Saat mem-Posting", Toast.LENGTH_SHORT).show();
+                    pd.dismiss();
+                }
+            });
+        }
+
+    }
+
     public void showProgresDialog() {
         pd = new ProgressDialog(this);
         pd.setTitle("Tunggu Sesaat");
@@ -281,5 +333,21 @@ public class AktifitasTambahEvent extends AppCompatActivity implements View.OnCl
             }
         });
         pd.show();
+    }
+
+    public void isEditEvent() {
+        UserEvent userEvent = PublicVar.userEventPublic;
+
+        editNama.setText(userEvent.getNamaEvent());
+        editDesk.setText(userEvent.getDescEvent());
+        editTgl.setText(userEvent.getTglEvent());
+        editWaktu.setText(userEvent.getWaktuEvent());
+        editLokasi.setText(userEvent.getLokasiEvent());
+        btnPostEvent.setText("Perbaharui Event");
+        namaImage = PublicVar.userEventPublic.getPhotoEvent();
+
+        Picasso.get().load(userEvent.getPhotoEvent()).into(imgEvent);
+
+        spinJenisEvent.setSelection(adapterJenisEvent.getPosition(userEvent.getJenisEvent()));
     }
 }

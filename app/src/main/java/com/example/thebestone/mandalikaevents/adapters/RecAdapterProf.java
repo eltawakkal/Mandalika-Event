@@ -2,6 +2,9 @@ package com.example.thebestone.mandalikaevents.adapters;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -31,6 +34,10 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -207,7 +214,7 @@ public class RecAdapterProf extends RecyclerView.Adapter<RecyclerView.ViewHolder
             public boolean onMenuItemClick(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.mnu_card_user_hapus:
-//                        deleteEvent(listUserEvents.get(position-1).getKodeEvent(), listUserEvents.get(position-1).getPhotoEvent());
+                        deleteEvent(userEvents.get(position-1).getKodeEvent(), userEvents.get(position-1).getPhotoEvent());
                         break;
                     case R.id.mnu_card_user_edit:
                         PublicVar.userEventPublic = userEvents.get(position-1);
@@ -220,6 +227,47 @@ public class RecAdapterProf extends RecyclerView.Adapter<RecyclerView.ViewHolder
             }
         });
         popMenu.show();
+    }
+
+    private void deleteEvent(final String kodeEvent, final String photoEventUrl) {
+
+        final DatabaseReference[] dbRef = {FirebaseDatabase.getInstance().getReference("events")};
+        final StorageReference[] storageRef = {FirebaseStorage.getInstance().getReference("Mandalika_event/")};
+
+        AlertDialog.Builder hapus = new AlertDialog.Builder(activity);
+        hapus
+                .setTitle("Hapus Event")
+                .setMessage("Yakin Hapus Event Ini?")
+                .setCancelable(false)
+                .setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        final ProgressDialog pd = new ProgressDialog(activity);
+                        pd.setTitle("Menghapus");
+                        pd.setMessage("Proses Menghapus Event...");
+                        pd.setCancelable(false);
+                        pd.show();
+
+                        dbRef[0] = FirebaseDatabase.getInstance().getReference("events").child(kodeEvent);
+                        storageRef[0] = FirebaseStorage.getInstance().getReferenceFromUrl(photoEventUrl);
+
+                        storageRef[0].delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                dbRef[0].removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        pd.dismiss();
+                                        Toast.makeText(activity, "Event Dihapus", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Batal", null)
+                .create().show();
+
     }
 
 }

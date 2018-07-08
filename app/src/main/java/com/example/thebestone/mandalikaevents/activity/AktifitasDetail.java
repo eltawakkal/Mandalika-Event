@@ -73,7 +73,7 @@ public class AktifitasDetail extends AppCompatActivity {
 
                     new SimpleAlarmManager(AktifitasDetail.this).setup(
                             SimpleAlarmManager.INTERVAL_DAY,
-                            2,
+                            7,
                             0,
                             0
 
@@ -106,7 +106,7 @@ public class AktifitasDetail extends AppCompatActivity {
     public void sparatedTgl(String tgl) {
         String[] dataWaktu = tgl.split("/");
 
-        tahunJadi = Integer.parseInt(dataWaktu[0]);
+        tglJadi = Integer.parseInt(dataWaktu[0]);
         bulanJadi = Integer.parseInt(dataWaktu[1]);
         tahunJadi = Integer.parseInt(dataWaktu[2]);
 

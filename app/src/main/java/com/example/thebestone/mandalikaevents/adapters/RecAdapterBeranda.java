@@ -2,6 +2,9 @@ package com.example.thebestone.mandalikaevents.adapters;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -15,12 +18,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.thebestone.mandalikaevents.R;
 import com.example.thebestone.mandalikaevents.activity.AktifitasDetail;
+import com.example.thebestone.mandalikaevents.activity.AktifitasUtama;
+import com.example.thebestone.mandalikaevents.fragments.FragBeranda;
 import com.example.thebestone.mandalikaevents.models.User;
 import com.example.thebestone.mandalikaevents.models.UserEvent;
 import com.example.thebestone.mandalikaevents.preferences.MandalikaPref;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -115,6 +127,13 @@ public class RecAdapterBeranda extends RecyclerView.Adapter<RecyclerView.ViewHol
             itemsViewHolder.txtLokasiEvent.setText(userEvents.get(position-1).getLokasiEvent());
             itemsViewHolder.txtWaktuEvent.setText(tglEvent);
             itemsViewHolder.tvJenisEvent.setText(userEvents.get(position-1).getJenisEvent());
+
+            itemsViewHolder.imgDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    deleteEvent(userEvents.get(position-1).getKodeEvent(), userEvents.get(position-1).getPhotoEvent());
+                }
+            });
 
             if (user.getStatus().equals("Admin")) {
                 itemsViewHolder.imgDelete.setVisibility(View.VISIBLE);
@@ -219,5 +238,47 @@ public class RecAdapterBeranda extends RecyclerView.Adapter<RecyclerView.ViewHol
 
         this.userEvents = listEvent;
         notifyDataSetChanged();
+    }
+
+    private void deleteEvent(final String kodeEvent, final String photoEventUrl) {
+
+        final DatabaseReference[] dbRef = {FirebaseDatabase.getInstance().getReference("events")};
+        final StorageReference[] storageRef = {FirebaseStorage.getInstance().getReference("Mandalika_event/")};
+
+        AlertDialog.Builder hapus = new AlertDialog.Builder(activity);
+        hapus
+                .setTitle("Hapus Event")
+                .setMessage("Yakin Hapus Event Ini?")
+                .setCancelable(false)
+                .setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        final ProgressDialog pd = new ProgressDialog(activity);
+                        pd.setTitle("Menghapus");
+                        pd.setMessage("Proses Menghapus Event...");
+                        pd.setCancelable(false);
+                        pd.show();
+
+                        dbRef[0] = FirebaseDatabase.getInstance().getReference("events").child(kodeEvent);
+                        storageRef[0] = FirebaseStorage.getInstance().getReferenceFromUrl(photoEventUrl);
+
+                        storageRef[0].delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                dbRef[0].removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        pd.dismiss();
+                                        Toast.makeText(activity, "Event Dihapus", Toast.LENGTH_SHORT).show();
+                                        FragBeranda.fragBeranda.getEvents();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Batal", null)
+                .create().show();
+
     }
 }

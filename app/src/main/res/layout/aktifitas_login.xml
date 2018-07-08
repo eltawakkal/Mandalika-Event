@@ -13,6 +13,7 @@
 
         <ImageView
             android:src="@drawable/logo_app"
+            android:elevation="5dp"
             android:layout_width="200dp"
             android:layout_height="200dp" />
 
@@ -26,7 +27,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:text="Find Event Around Yout By Single Clik"
+            android:text="Find Event Around You By Single Clik"
             android:textColor="@color/colorWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -45,7 +46,7 @@
         android:background="@drawable/bg_rounded_google"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="30dp"
         android:textColor="@color/colorWhite"
         android:text="Masuk Dengan Google"
         android:layout_width="200dp"

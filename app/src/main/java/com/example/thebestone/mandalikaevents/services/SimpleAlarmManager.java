@@ -17,6 +17,8 @@ public class SimpleAlarmManager {
 
     private Context context;
     private Intent alarmIntent;
+    private int monthOfYear;
+    private int dayOfMonth;
     private int hourOfDay;
     private int minuteOfDay;
     private int secondOfDay;
@@ -53,6 +55,8 @@ public class SimpleAlarmManager {
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("interval", this.interval);
+//            jsonObject.put("monthOfYear", this.monthOfYear);
+//            jsonObject.put("dayOfMonth", this.dayOfMonth);
             jsonObject.put("hourOfDay", this.hourOfDay);
             jsonObject.put("minuteOfDay", this.minuteOfDay);
             jsonObject.put("secondOfDay", this.secondOfDay);
@@ -66,11 +70,13 @@ public class SimpleAlarmManager {
     public static SimpleAlarmManager initWithId(Context context, int id) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("alarm_manager", Context.MODE_PRIVATE);
         String registrationExtra = sharedPreferences.getString("idExtra" + id, null);
-        int interval, hourDay, minuteOfDay, secondOfDay;
+        int interval, monthOfYear, dayOfMoth, hourDay, minuteOfDay, secondOfDay;
         if( registrationExtra != null ) {
             try {
                 JSONObject jsonObject = new JSONObject(registrationExtra);
                 interval = jsonObject.getInt("interval");
+//                monthOfYear = jsonObject.getInt("monthOfYear");
+//                dayOfMoth = jsonObject.getInt("dayOfMonth");
                 hourDay = jsonObject.getInt("hourOfDay");
                 minuteOfDay = jsonObject.getInt("minuteOfDay");
                 secondOfDay = jsonObject.getInt("secondOfDay");
@@ -90,11 +96,15 @@ public class SimpleAlarmManager {
     }
 
     public SimpleAlarmManager setup(long interval, int hourOfDay, int minuteOfDay, int secondOfDay) {
+//        this.monthOfYear = monthOfYear;
+//        this.dayOfMonth = dayOfMonth;
         this.hourOfDay = hourOfDay;
         this.secondOfDay = secondOfDay;
         this.minuteOfDay = minuteOfDay;
         this.interval = interval;
         calendar = Calendar.getInstance();
+//        calendar.set(Calendar.MONTH, monthOfYear);
+//        calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
         calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
         calendar.set(Calendar.MINUTE, minuteOfDay);
         calendar.set(Calendar.SECOND, secondOfDay);

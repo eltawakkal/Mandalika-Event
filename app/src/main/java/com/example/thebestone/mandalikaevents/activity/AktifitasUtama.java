@@ -28,6 +28,8 @@ public class AktifitasUtama extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     public static TextView tvLogo;
 
+    private int statusMode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,12 @@ public class AktifitasUtama extends AppCompatActivity {
 
         initObj();
 
-        setFragment(fragBeranda);
+        if (statusMode == 1) {
+            setFragment(fragJoin);
+        } else {
+            setFragment(fragBeranda);
+        }
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -65,6 +72,8 @@ public class AktifitasUtama extends AppCompatActivity {
     }
 
     private void initObj() {
+
+        statusMode = getIntent().getIntExtra("STATUS", 0);
 
         bottomNavigationView = findViewById(R.id.bottom_nav_main);
         tvLogo = findViewById(R.id.tv_logo);

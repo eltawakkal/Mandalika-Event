@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
     android:gravity="center">
 
     <View
-        android:background="@color/colorPrimary"
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+        android:layout_height="5dp"/>
 
     <LinearLayout
+        android:padding="10dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -18,6 +20,7 @@
         <TextView
             android:text="@string/syarat_join"
             android:fontFamily="@font/lobster_two"
+            android:textColor="@color/colorWhite"
             android:gravity="center"
             android:textSize="18sp"
             android:layout_width="wrap_content"
@@ -31,24 +34,28 @@
 
             <CheckBox
                 android:text="Tidak Mem-Posting Event Yang Mengandung Sara"
+                android:textColor="@color/colorWhite"
                 android:fontFamily="@font/lobster_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <CheckBox
                 android:text="Tanggung Jawab Sepenuhnya Oleh Pemilik Email"
+                android:textColor="@color/colorWhite"
                 android:fontFamily="@font/lobster_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <CheckBox
                 android:text="Jika Ada Event Yang Melanggar Maka Admin Akan Menghapus Tanpa Sepengetahuan Pengguna"
+                android:textColor="@color/colorWhite"
                 android:fontFamily="@font/lobster_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <CheckBox
                 android:text="Menyetujui Semua Aturan yang Ada"
+                android:textColor="@color/colorWhite"
                 android:fontFamily="@font/lobster_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

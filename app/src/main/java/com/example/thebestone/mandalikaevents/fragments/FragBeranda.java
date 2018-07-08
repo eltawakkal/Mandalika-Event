@@ -38,6 +38,8 @@ public class FragBeranda extends Fragment {
     private List<UserEvent> listEvents;
     private MandalikaPref myPref;
 
+    public static FragBeranda fragBeranda;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -56,6 +58,8 @@ public class FragBeranda extends Fragment {
     }
 
     private void initObj(View v) {
+
+        fragBeranda = this;
 
         refEvents = FirebaseDatabase.getInstance().getReference("events");
         mRecyclerMain = v.findViewById(R.id.rec_main);
@@ -80,6 +84,7 @@ public class FragBeranda extends Fragment {
         refEvents.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                listEvents.clear();
                 List<UserEvent> tampEvents = new ArrayList<>();
 
 

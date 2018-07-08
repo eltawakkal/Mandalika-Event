@@ -93,8 +93,6 @@ public class AktifitasLogin extends AppCompatActivity {
         try {
             final GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
-            Toast.makeText(this, "email : " + account.getDisplayName(), Toast.LENGTH_SHORT).show();
-
             DatabaseReference refUser = FirebaseDatabase.getInstance().getReference("users");
 
             Query query = refUser.orderByChild("emailUser").equalTo(account.getEmail());
@@ -155,12 +153,27 @@ public class AktifitasLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                User user = new User(
-                        account.getDisplayName(),
-                        account.getEmail(),
-                        account.getPhotoUrl().toString(),
-                        "Member"
-                );
+                User user;
+
+                try {
+                    user = new User(
+                            account.getDisplayName(),
+                            account.getEmail(),
+                            account.getPhotoUrl().toString(),
+                            "Member"
+                    );
+                } catch (Exception e) {
+
+                    Toast.makeText(AktifitasLogin.this, "Anda Tidak Memiliki Foto", Toast.LENGTH_SHORT).show();
+
+                    user = new User(
+                            account.getDisplayName(),
+                            account.getEmail(),
+                            "tidak ada",
+                            "Member"
+                    );
+                }
+
 
                 String id = refUser.push().getKey();
                 refUser.child(id).setValue(user);

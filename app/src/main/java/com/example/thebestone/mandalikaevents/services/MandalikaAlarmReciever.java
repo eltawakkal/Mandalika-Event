@@ -16,18 +16,19 @@ public class MandalikaAlarmReciever extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        Toast.makeText(context, "Alarm", Toast.LENGTH_LONG).show();
-
 //        context.startService(new Intent(context, MandalikaService.class));
 
         Intent intentHome = new Intent(context, AktifitasUtama.class);
+
+        intentHome.putExtra("STATUS", 1);
+
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intentHome, 0);
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(context)
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setContentTitle("Alarm")
-                        .setContentText("Hello World!")
+                        .setSmallIcon(R.drawable.logo_app)
+                        .setContentTitle("Pengingat Agenda")
+                        .setContentText("Ketuk Untuk Melihat List Agendamu")
                         .setContentIntent(pendingIntent);
 
         mBuilder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
