@@ -1,19 +1,7 @@
 #Internal package file, do not edit.
-#Mon Jul 09 09:16:25 WIB 2018
-1.base=/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/transforms/dexMerger/debug/49
-2.path=classes.dex
+#Mon Jul 09 09:30:40 WIB 2018
 0.baseType=DIRECTORY
-3.baseType=DIRECTORY
-2.base=/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/transforms/dexMerger/debug/47
-3.set=DEX
-2.set=DEX
-1.baseType=DIRECTORY
-3.path=classes.dex
-count=4
-1.set=DEX
+0.base=/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/transforms/dexMerger/debug/51
 0.path=classes.dex
-3.base=/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/transforms/dexMerger/debug/48
 0.set=DEX
-0.base=/Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/build/intermediates/transforms/dexMerger/debug/46
-2.baseType=DIRECTORY
-1.path=classes.dex
+count=1
