@@ -105,6 +105,9 @@ public class RecAdapterProf extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             Pair pair = new Pair<View, String> (AktifitasUtama.tvLogo, "transLogo");
                             Intent i = new Intent(activity, AktifitasLogin.class);
                             ActivityOptions ao = ActivityOptions.makeSceneTransitionAnimation(activity, pair);
+
+                            myPref.deleteUser();
+
                             activity.startActivity(i, ao.toBundle());
                             activity.finish();
                         }

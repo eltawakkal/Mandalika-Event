@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import com.example.thebestone.mandalikaevents.R;
 import com.example.thebestone.mandalikaevents.fragments.FragBeranda;
 import com.example.thebestone.mandalikaevents.fragments.FragJoin;
 import com.example.thebestone.mandalikaevents.fragments.FragProfil;
+import com.example.thebestone.mandalikaevents.preferences.MandalikaPref;
 import com.example.thebestone.mandalikaevents.services.MandalikaService;
 
 public class AktifitasUtama extends AppCompatActivity {
@@ -29,6 +31,8 @@ public class AktifitasUtama extends AppCompatActivity {
     public static TextView tvLogo;
 
     private int statusMode;
+
+    MandalikaPref myPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +47,6 @@ public class AktifitasUtama extends AppCompatActivity {
             setFragment(fragBeranda);
         }
 
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -55,10 +58,22 @@ public class AktifitasUtama extends AppCompatActivity {
                         setFragment(fragBeranda);
                         break;
                     case R.id.menu_join:
-                        setFragment(fragJoin);
+
+                        if (loggedIn()) {
+                            setFragment(fragJoin);
+                        } else {
+                            startActivity(new Intent(AktifitasUtama.this, AktifitasLogin.class));
+                        }
+
                         break;
                     case R.id.menu_profil:
-                        setFragment(fragProfil);
+
+                        if (loggedIn()) {
+                            setFragment(fragProfil);
+                        } else {
+                            startActivity(new Intent(AktifitasUtama.this, AktifitasLogin.class));
+                        }
+
                         break;
 
                     default:
@@ -82,6 +97,8 @@ public class AktifitasUtama extends AppCompatActivity {
         fragJoin = new FragJoin();
         fragProfil = new FragProfil();
 
+        myPref = new MandalikaPref(this);
+
     }
 
     public void setFragment(Fragment fragment) {
@@ -91,6 +108,16 @@ public class AktifitasUtama extends AppCompatActivity {
         fragTransaction
                 .replace(R.id.frag_container_beranda, fragment)
                 .commit();
+    }
+
+    private boolean loggedIn() {
+        String nama = myPref.getNama();
+
+        if (nama == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
 }

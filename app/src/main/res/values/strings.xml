@@ -100,4 +100,27 @@
 
     </string>
     <string name="syarat_join">Beriku Syarat Dan Ketentuan Dalam Penggunaan Aplikasi Mandalika Event</string>
+
+    <string-array name="kabupaten">
+        <item>Lombok Barat</item>
+        <item>Lombok Tengah</item>
+        <item>Lombok Timur</item>
+        <item>Lombok Utara</item>
+        <item>Kota Mataram</item>
+    </string-array>
+
+    <string-array name="arrayBulan">
+        <item>Januari</item>
+        <item>Fabruari</item>
+        <item>Maretk</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
 </resources>

@@ -33,6 +33,7 @@ public class FragProfil extends Fragment {
 
     private RecyclerView mRecyclerMain;
     private FloatingActionButton fabTambahEvent;
+    private FloatingActionButton fabFilter;
     private RecAdapterProf adapterBeranda;
     private MandalikaPref myPref;
 
@@ -84,6 +85,9 @@ public class FragProfil extends Fragment {
 
         mRecyclerMain = v.findViewById(R.id.rec_main);
         fabTambahEvent = v.findViewById(R.id.fabTambahEvent);
+        fabFilter = v.findViewById(R.id.fabFilterMain);
+
+        fabFilter.setVisibility(View.GONE);
         fabTambahEvent.setVisibility(View.VISIBLE);
 
 

@@ -137,7 +137,9 @@ public class AktifitasLogin extends AppCompatActivity {
     }
 
     private void gotoAktifitasUtama() {
-        startActivity(new Intent(this, AktifitasUtama.class));
+        Intent intentUtama = new Intent(this, AktifitasUtama.class);
+        intentUtama.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intentUtama);
     }
 
     public void tampilkanPersetujuan(final GoogleSignInAccount account) {
@@ -185,5 +187,9 @@ public class AktifitasLogin extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+    }
+
+    public void skipLogin(View v) {
+        gotoAktifitasUtama();
     }
 }

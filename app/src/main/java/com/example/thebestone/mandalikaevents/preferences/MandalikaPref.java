@@ -37,13 +37,11 @@ public class MandalikaPref {
     public void deleteUser() {
         editorPref = mandalikaPref.edit();
         editorPref
-                .remove("kodeUser")
-                .remove("nama")
-                .remove("email")
-                .remove("imgUrl")
-                .remove("status");
-
-        editorPref.commit();
+                .remove(KEY_NAMA)
+                .remove(KEY_EMAIL)
+                .remove(KEY_FOTOURL)
+                .remove(KEY_STATUS)
+                .commit();
     }
 
     public User getUser() {

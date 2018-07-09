@@ -79,8 +79,7 @@ public class RecAdapterBeranda extends RecyclerView.Adapter<RecyclerView.ViewHol
             hVH.imgRefresh.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    userEvents = userEventsBackUp;
-                    notifyDataSetChanged();
+                    FragBeranda.fragBeranda.getEvents();
                 }
             });
 
@@ -135,9 +134,13 @@ public class RecAdapterBeranda extends RecyclerView.Adapter<RecyclerView.ViewHol
                 }
             });
 
-            if (user.getStatus().equals("Admin")) {
-                itemsViewHolder.imgDelete.setVisibility(View.VISIBLE);
-            } else {
+            try {
+                if (user.getStatus().equals("Admin")) {
+                    itemsViewHolder.imgDelete.setVisibility(View.VISIBLE);
+                } else {
+                    itemsViewHolder.imgDelete.setVisibility(View.INVISIBLE);
+                }
+            } catch (Exception e) {
                 itemsViewHolder.imgDelete.setVisibility(View.INVISIBLE);
             }
 

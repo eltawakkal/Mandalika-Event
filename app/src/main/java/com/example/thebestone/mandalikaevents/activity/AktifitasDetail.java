@@ -69,28 +69,35 @@ public class AktifitasDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (dbHelper.dataTidakDouble(kodeEvent, myPref.getEmail())) {
-                    dbHelper.addEvent(kodeEvent, myPref.getEmail(), photoUser, namaEvent, desEvent, photoEvent, jenisEvent, waktuEvent, tglEvent, lokEvent, myPref.getEmail());
-                    sparatedTgl(tglEvent);
+                if (loggedIn()) {
 
-                    new SimpleAlarmManager(AktifitasDetail.this).setup(
-                            SimpleAlarmManager.INTERVAL_DAY,
-                            7,
-                            0,
-                            0
+                    if (dbHelper.dataTidakDouble(kodeEvent, myPref.getEmail())) {
+                        dbHelper.addEvent(kodeEvent, myPref.getEmail(), photoUser, namaEvent, desEvent, photoEvent, jenisEvent, waktuEvent, tglEvent, lokEvent, myPref.getEmail());
+                        sparatedTgl(tglEvent);
 
-                    ).register(1).start();
+                        new SimpleAlarmManager(AktifitasDetail.this).setup(
+                                SimpleAlarmManager.INTERVAL_DAY,
+                                7,
+                                0,
+                                0
 
-                    Snackbar.make(view, "Dimasukkan Didalam Favorit", Snackbar.LENGTH_LONG)
-                            .setAction("Batalkan", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    dbHelper.deleteEvent(kodeEvent);
-                                }
-                            }).show();
+                        ).register(1).start();
+
+                        Snackbar.make(view, "Dimasukkan Didalam Favorit", Snackbar.LENGTH_LONG)
+                                .setAction("Batalkan", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        dbHelper.deleteEvent(kodeEvent);
+                                    }
+                                }).show();
+                    } else {
+                        Toast.makeText(AktifitasDetail.this, "Event ini tsudah ada di list agenda", Toast.LENGTH_SHORT).show();
+                    }
+
                 } else {
-                    Toast.makeText(AktifitasDetail.this, "Event ini tsudah ada di list agenda", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(AktifitasDetail.this, AktifitasLogin.class));
                 }
+
             }
         });
     }
@@ -140,6 +147,16 @@ public class AktifitasDetail extends AppCompatActivity {
         tvWaktu = findViewById(R.id.tvWaktuDetails);
 
         imgPhotoEventDetail = findViewById(R.id.imgEventDetail);
+    }
+
+    private boolean loggedIn() {
+        String nama = myPref.getNama();
+
+        if (nama == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
 }

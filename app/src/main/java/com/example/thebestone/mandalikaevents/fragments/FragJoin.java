@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -59,6 +60,9 @@ public class FragJoin extends Fragment {
                 userEventsReady.add(userEvent);
             }
         }
+
+        FloatingActionButton fabFilter = v.findViewById(R.id.fabFilterMain);
+        fabFilter.setVisibility(View.GONE);
 
         if (userEventsReady.size()!=0) {
             adapterFavQ = new RecAdapterJoin(userEvents, getActivity());
