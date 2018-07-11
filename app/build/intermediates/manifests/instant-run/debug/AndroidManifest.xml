@@ -46,6 +46,9 @@
         <activity android:name="com.example.thebestone.mandalikaevents.activity.AktifitasUtama" />
         <activity android:name="com.example.thebestone.mandalikaevents.activity.AktifitasDetail" />
         <activity android:name="com.example.thebestone.mandalikaevents.activity.AktifitasTambahEvent" />
+        <activity
+            android:name="com.example.thebestone.mandalikaevents.activity.OriginalPhoto"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <service android:name="com.example.thebestone.mandalikaevents.services.MandalikaService" />
 

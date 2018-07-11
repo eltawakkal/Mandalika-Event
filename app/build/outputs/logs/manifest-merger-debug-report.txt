@@ -1,10 +1,11 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/c605fe3c11c3edc3055762ca831321e8/AndroidManifest.xml:17:1-39:12
+MERGED from [com.jsibbold:zoomage:1.2.0-SNAPSHOT] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/zoomage-1.2.0-SNAPSHOT.aar/37de0b1f325441e948c4109c27d46873/AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.firebase:firebase-core:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7434fe50e9a6e2b217279963e059442f/AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/539f6d1c2fb05a4938b68a9a72e53bc9/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0ab9ea1026456563f8ffc8f1e6807511/AndroidManifest.xml:17:1-22:12
@@ -26,49 +27,49 @@ MERGED from [com.google.firebase:firebase-common:11.8.0] /Users/thebestone/.grad
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/233344dbd137684cd64c2c34736be3cf/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-storage-common:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-11.8.0.aar/05c33a4765ef37f86fc6f912c8224766/AndroidManifest.xml:2:1-8:12
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/bc51fe7e31c7d00441152133647cd882/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/bbbd30e1e0585c7446c4b6724dbd878d/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5245d3e26d9e66a4a5d4a9a0a0207409/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1993c868501a772815b18d270bef7355/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bcae86518e694a15ab418e50cec0cd3a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5bf6b0771a08b0f378dc4a7e7850fd27/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/fab4e272610c706f07f81dce03b65519/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/920b69dd3dd77a25baec8d286d2e6ed1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a9d05bd3adf2e6e3fb97f3a6b0a6146f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:exifinterface:27.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/f4c6f71981b82b275109ded72e14885f/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6804e189a5dab520a8e7a8ef33fb49c9/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d97b75880a7a9cbaf1bfd8a6db7d2638/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/55b4b0d8ac1fa8c20399ef3e33e0b633/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-storage-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-storage-license-11.8.0.aar/6e059487488db6f9ec371f80e3918e6f/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/e8247f525e5c2fbae6bf06525be82160/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/bbbd30e1e0585c7446c4b6724dbd878d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bcae86518e694a15ab418e50cec0cd3a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a9d05bd3adf2e6e3fb97f3a6b0a6146f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/f4c6f71981b82b275109ded72e14885f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5245d3e26d9e66a4a5d4a9a0a0207409/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1993c868501a772815b18d270bef7355/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5bf6b0771a08b0f378dc4a7e7850fd27/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/fab4e272610c706f07f81dce03b65519/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/920b69dd3dd77a25baec8d286d2e6ed1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6804e189a5dab520a8e7a8ef33fb49c9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d97b75880a7a9cbaf1bfd8a6db7d2638/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/7630ca2426f494a121513ff01e49e657/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/f2b97f7a739f89b6dbb57614ccfcf155/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/dcf11d5248d5fc4e53fefba54f6ce9d1/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/59441ba4b047fe8ff112212080b6b4b6/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/5ab8242b5c406232f7d1e7e154ea6f60/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/591f9d9905e85d3c99aea7b5360a6452/AndroidManifest.xml:2:1-6:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7661ad406daf990ff3f5fdca738a5dc6/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7f59c82328dea310d208c75f45e07126/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/371a2f331098f9bc89a27224fc8d1e11/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/a945b6f85b1c484a865198f65e086263/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-storage-common-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-license-11.8.0.aar/e8a19b981676bc971d6308307103ebee/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/0c30911b6041bca7b2b5af69c1b8dd9a/AndroidManifest.xml:2:1-6:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/6f47538dbe6eda4586da86f648610c36/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/207ca07902ed28af2c75cf06f3940447/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.8.0.aar/ef8138cf227b7fed09283aa70e2a8bb9/AndroidManifest.xml:2:1-6:12
-INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
-INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7661ad406daf990ff3f5fdca738a5dc6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/207ca07902ed28af2c75cf06f3940447/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7f59c82328dea310d208c75f45e07126/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
 	package
 		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:3:5-53
 		INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
 		INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-56:12
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:1-59:12
 		INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:2:11-69
@@ -77,7 +78,7 @@ ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/ma
 	android:name
 		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:5:22-78
 application
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:7:5-54:19
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:7:5-57:19
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/c605fe3c11c3edc3055762ca831321e8/AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/c605fe3c11c3edc3055762ca831321e8/AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.firebase:firebase-core:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7434fe50e9a6e2b217279963e059442f/AndroidManifest.xml:5:5-20
@@ -176,50 +177,58 @@ activity#com.example.thebestone.mandalikaevents.activity.AktifitasTambahEvent
 ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:29:9-76
 	android:name
 		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:29:19-64
+activity#com.example.thebestone.mandalikaevents.activity.OriginalPhoto
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:31:9-32:71
+	android:theme
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:32:13-69
+	android:name
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:31:19-57
 service#com.example.thebestone.mandalikaevents.services.MandalikaService
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:31:9-61
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:34:9-61
 	android:name
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:31:18-59
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:34:18-59
 receiver#com.example.thebestone.mandalikaevents.services.MandalikaAlarmReciever
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:33:9-36:38
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:36:9-39:38
 	android:enabled
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:35:13-35
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:38:13-35
 	android:exported
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:36:13-36
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:39:13-36
 	android:name
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:34:13-60
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:37:13-60
 receiver#com.example.thebestone.mandalikaevents.services.OnBootReceiver
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:38:9-44:20
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:41:9-47:20
 	android:exported
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:40:13-37
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:39:13-52
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:42:13-52
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:41:13-43:29
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:44:13-46:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:42:17-78
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:45:17-78
 	android:name
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:42:25-76
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:45:25-76
 receiver#com.example.thebestone.mandalikaevents.services.OnTimeChangeReceiver
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:46:9-52:20
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:49:9-55:20
 	android:exported
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:48:13-37
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:47:13-58
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:50:13-58
 intent-filter#action:name:android.intent.action.TIME_SET
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:49:13-51:29
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:52:13-54:29
 	android:priority
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:49:28-48
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:52:28-48
 action#android.intent.action.TIME_SET
-ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:50:17-72
+ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:53:17-72
 	android:name
-		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:50:25-70
+		ADDED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml:53:25-70
 uses-sdk
 INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/c605fe3c11c3edc3055762ca831321e8/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/c605fe3c11c3edc3055762ca831321e8/AndroidManifest.xml:20:5-44
+MERGED from [com.jsibbold:zoomage:1.2.0-SNAPSHOT] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/zoomage-1.2.0-SNAPSHOT.aar/37de0b1f325441e948c4109c27d46873/AndroidManifest.xml:8:5-10:41
+MERGED from [com.jsibbold:zoomage:1.2.0-SNAPSHOT] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/zoomage-1.2.0-SNAPSHOT.aar/37de0b1f325441e948c4109c27d46873/AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.firebase:firebase-core:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7434fe50e9a6e2b217279963e059442f/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-core:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7434fe50e9a6e2b217279963e059442f/AndroidManifest.xml:4:5-43
 MERGED from [com.android.support:design:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/539f6d1c2fb05a4938b68a9a72e53bc9/AndroidManifest.xml:20:5-44
@@ -262,34 +271,34 @@ MERGED from [com.google.firebase:firebase-storage-common:11.8.0] /Users/thebesto
 MERGED from [com.google.firebase:firebase-storage-common:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-11.8.0.aar/05c33a4765ef37f86fc6f912c8224766/AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/bc51fe7e31c7d00441152133647cd882/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/bc51fe7e31c7d00441152133647cd882/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/bbbd30e1e0585c7446c4b6724dbd878d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/bbbd30e1e0585c7446c4b6724dbd878d/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5245d3e26d9e66a4a5d4a9a0a0207409/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5245d3e26d9e66a4a5d4a9a0a0207409/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1993c868501a772815b18d270bef7355/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1993c868501a772815b18d270bef7355/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bcae86518e694a15ab418e50cec0cd3a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bcae86518e694a15ab418e50cec0cd3a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5bf6b0771a08b0f378dc4a7e7850fd27/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5bf6b0771a08b0f378dc4a7e7850fd27/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/fab4e272610c706f07f81dce03b65519/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/fab4e272610c706f07f81dce03b65519/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/920b69dd3dd77a25baec8d286d2e6ed1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/920b69dd3dd77a25baec8d286d2e6ed1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a9d05bd3adf2e6e3fb97f3a6b0a6146f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a9d05bd3adf2e6e3fb97f3a6b0a6146f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/f4c6f71981b82b275109ded72e14885f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:27.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/f4c6f71981b82b275109ded72e14885f/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6804e189a5dab520a8e7a8ef33fb49c9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6804e189a5dab520a8e7a8ef33fb49c9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d97b75880a7a9cbaf1bfd8a6db7d2638/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d97b75880a7a9cbaf1bfd8a6db7d2638/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/55b4b0d8ac1fa8c20399ef3e33e0b633/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-database-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/55b4b0d8ac1fa8c20399ef3e33e0b633/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-storage-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-storage-license-11.8.0.aar/6e059487488db6f9ec371f80e3918e6f/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-storage-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-storage-license-11.8.0.aar/6e059487488db6f9ec371f80e3918e6f/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/e8247f525e5c2fbae6bf06525be82160/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/e8247f525e5c2fbae6bf06525be82160/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-v4:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/bbbd30e1e0585c7446c4b6724dbd878d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/bbbd30e1e0585c7446c4b6724dbd878d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bcae86518e694a15ab418e50cec0cd3a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/bcae86518e694a15ab418e50cec0cd3a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a9d05bd3adf2e6e3fb97f3a6b0a6146f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/a9d05bd3adf2e6e3fb97f3a6b0a6146f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/f4c6f71981b82b275109ded72e14885f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/f4c6f71981b82b275109ded72e14885f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5245d3e26d9e66a4a5d4a9a0a0207409/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5245d3e26d9e66a4a5d4a9a0a0207409/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1993c868501a772815b18d270bef7355/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/1993c868501a772815b18d270bef7355/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5bf6b0771a08b0f378dc4a7e7850fd27/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5bf6b0771a08b0f378dc4a7e7850fd27/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/fab4e272610c706f07f81dce03b65519/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/fab4e272610c706f07f81dce03b65519/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/920b69dd3dd77a25baec8d286d2e6ed1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/920b69dd3dd77a25baec8d286d2e6ed1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6804e189a5dab520a8e7a8ef33fb49c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6804e189a5dab520a8e7a8ef33fb49c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d97b75880a7a9cbaf1bfd8a6db7d2638/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/d97b75880a7a9cbaf1bfd8a6db7d2638/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/7630ca2426f494a121513ff01e49e657/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/7630ca2426f494a121513ff01e49e657/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/f2b97f7a739f89b6dbb57614ccfcf155/AndroidManifest.xml:4:5-43
@@ -302,10 +311,6 @@ MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/t
 MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/5ab8242b5c406232f7d1e7e154ea6f60/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/591f9d9905e85d3c99aea7b5360a6452/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/591f9d9905e85d3c99aea7b5360a6452/AndroidManifest.xml:4:5-43
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7661ad406daf990ff3f5fdca738a5dc6/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7661ad406daf990ff3f5fdca738a5dc6/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7f59c82328dea310d208c75f45e07126/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7f59c82328dea310d208c75f45e07126/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/371a2f331098f9bc89a27224fc8d1e11/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/371a2f331098f9bc89a27224fc8d1e11/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-common-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/a945b6f85b1c484a865198f65e086263/AndroidManifest.xml:4:5-43
@@ -316,10 +321,14 @@ MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /Users/
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/0c30911b6041bca7b2b5af69c1b8dd9a/AndroidManifest.xml:4:5-43
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/6f47538dbe6eda4586da86f648610c36/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/6f47538dbe6eda4586da86f648610c36/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/207ca07902ed28af2c75cf06f3940447/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/207ca07902ed28af2c75cf06f3940447/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.8.0.aar/ef8138cf227b7fed09283aa70e2a8bb9/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.8.0.aar/ef8138cf227b7fed09283aa70e2a8bb9/AndroidManifest.xml:4:5-43
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7661ad406daf990ff3f5fdca738a5dc6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/7661ad406daf990ff3f5fdca738a5dc6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/207ca07902ed28af2c75cf06f3940447/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/207ca07902ed28af2c75cf06f3940447/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7f59c82328dea310d208c75f45e07126/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/thebestone/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7f59c82328dea310d208c75f45e07126/AndroidManifest.xml:20:5-44
 INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 INJECTED from /Users/thebestone/Documents/as_proj/urgent/Mandalika-Event/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

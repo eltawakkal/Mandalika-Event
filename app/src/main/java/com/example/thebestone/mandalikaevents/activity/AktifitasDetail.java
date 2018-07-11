@@ -1,7 +1,5 @@
 package com.example.thebestone.mandalikaevents.activity;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,13 +16,9 @@ import com.example.thebestone.mandalikaevents.R;
 import com.example.thebestone.mandalikaevents.adapters.PublicVar;
 import com.example.thebestone.mandalikaevents.models.UserEvent;
 import com.example.thebestone.mandalikaevents.preferences.MandalikaPref;
-import com.example.thebestone.mandalikaevents.services.MandalikaAlarmReciever;
 import com.example.thebestone.mandalikaevents.services.SimpleAlarmManager;
 import com.example.thebestone.mandalikaevents.sqlite.SqliteHelper;
 import com.squareup.picasso.Picasso;
-
-import java.util.Calendar;
-import java.util.Date;
 
 public class AktifitasDetail extends AppCompatActivity {
 
@@ -57,6 +51,13 @@ public class AktifitasDetail extends AppCompatActivity {
         tvLokasi.setText(lokEvent);
         tvTgl.setText(tglEvent);
         tvWaktu.setText(waktuEvent);
+
+        imgPhotoEventDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openOriginalImage();
+            }
+        });
 
         try {
             Picasso.get().load(photoEvent).into(imgPhotoEventDetail);
@@ -100,6 +101,12 @@ public class AktifitasDetail extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void openOriginalImage() {
+        Intent intent = new Intent(this, OriginalPhoto.class);
+        intent.putExtra("photo", photoEvent);
+        startActivity(intent);
     }
 
     @Override

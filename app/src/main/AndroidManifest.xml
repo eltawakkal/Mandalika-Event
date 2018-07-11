@@ -28,6 +28,9 @@
         <activity android:name=".activity.AktifitasDetail" />
         <activity android:name=".activity.AktifitasTambahEvent"></activity>
 
+        <activity android:name=".activity.OriginalPhoto"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
         <service android:name=".services.MandalikaService"/>
 
         <receiver
